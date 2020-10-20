@@ -14,7 +14,7 @@ namespace UserService.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        DatabaseContext db;
+        readonly DatabaseContext db;
 
         public UserController()
         {
@@ -51,18 +51,6 @@ namespace UserService.Controllers
 
                 throw;
             }
-        }
-
-        // PUT api/<UserController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<UserController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
